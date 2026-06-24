@@ -1,0 +1,141 @@
+Việc một repo (repository) có thường xuyên được cập nhật hay không phụ thuộc hoàn toàn vào giai đoạn, loại hình và quy mô của dự án đó. Không có một tần suất cố định cho tất cả các dự án.
+------------------------------
+## Các kịch bản cập nhật phổ biến
+
+* Dự án đang phát triển tích cực: Cập nhật liên tục. Lập trình viên có thể đẩy mã nguồn mới lên nhiều lần trong một ngày hoặc vài lần một tuần khi hoàn thành các tính năng mới hoặc sửa lỗi.
+* Sản phẩm đã ổn định (Stable): Cập nhật ít lại. Repo chỉ được cập nhật vài tuần hoặc vài tháng một lần khi có đợt bảo trì, nâng cấp lớn hoặc vá lỗi bảo mật khẩn cấp.
+* Dự án lưu trữ (Archived) hoặc Thư viện mẫu: Không bao giờ hoặc hiếm khi cập nhật. Đây là những kho mã nguồn đã hoàn thành, phục vụ mục đích tham khảo hoặc học tập.
+
+## Tần suất cập nhật nói lên điều gì?
+
+* Dự án mã nguồn mở (Open-source): Tần suất cập nhật (qua biểu đồ Commit Activity trên GitHub) là thước đo độ "sống" của dự án. Dự án cập nhật đều đặn chứng tỏ cộng đồng đang hoạt động mạnh mẽ và sản phẩm được hỗ trợ tốt.
+* Môi trường đi làm (Doanh nghiệp): Việc đẩy code (push commit) diễn ra hàng ngày. Điều này giúp các thành viên trong đội ngũ luôn đồng bộ công việc và tránh xung đột mã nguồn (conflict).
+
+------------------------------
+Để giúp bạn quản lý tốt hơn quá trình cập nhật mã nguồn sau này, bạn có thể tham khảo thêm hướng dẫn cách cập nhật dự án qua video dưới đây:
+· 1970 M01 1
+------------------------------
+Nếu bạn muốn đi sâu hơn vào quy trình làm việc thực tế, hãy cho tôi biết:
+
+* Bạn muốn biết cách cập nhật code mới từ GitHub về máy (git pull)?
+* Bạn cần hiểu về quy trình quản lý nhánh (Git Branching) khi làm việc nhóm?
+
+Tôi sẽ giải đáp chi tiết cho bạn!
+
+
+
+
+
+
+
+
+
+
+Tạo và đẩy một dự án (repository/repo) lên GitHub bao gồm hai giai đoạn chính: tạo kho chứa trên nền tảng trực tuyến và đồng bộ thư mục mã nguồn từ máy tính cá nhân (local) lên đó bằng các câu lệnh Git. [1, 2] 
+------------------------------
+## Bước 1: Tạo Repository mới trên GitHub
+
+   1. Đăng nhập vào tài khoản của bạn trên trang chủ GitHub. [3] 
+   2. Nhấp vào biểu tượng dấu "+" ở góc trên cùng bên phải và chọn New repository. [3] 
+   3. Điền các thông tin cơ bản:
+   * Repository name: Tên của dự án (ví dụ: my-project).
+      * Chọn Public (ai cũng thấy) hoặc Private (chỉ mình bạn hoặc người được cấp quyền thấy).
+      * Không chọn các ô tạo file README, .gitignore, hay License nếu bạn đã có sẵn thư mục code trên máy tính. [4, 5] 
+   4. Nhấn Create repository. Màn hình sẽ hiện ra hướng dẫn kết nối. Hãy giữ nguyên trang này để lấy link liên kết (URL bắt đầu bằng https:// hoặc git@). [4, 6] 
+
+## Bước 2: Đẩy dự án từ máy tính (Local) lên GitHub
+Mở phần mềm Terminal (trên macOS/Linux) hoặc Git Bash (trên Windows), điều hướng đến thư mục chứa mã nguồn của bạn và thực hiện lần lượt các lệnh sau: [4, 6] 
+
+   1. Khởi tạo kho lưu trữ Git:
+   
+   git init
+   
+   2. Đưa toàn bộ các file trong thư mục vào hàng đợi để chuẩn bị lưu trữ:
+   
+   git add .
+   
+   3. Lưu lại trạng thái của code kèm theo lời nhắn:
+   
+   git commit -n "Lần đầu tải code lên GitHub"
+   
+   4. Kết nối thư mục dưới máy với repo trống bạn vừa tạo trên GitHub (thay URL dưới đây bằng link repo của bạn):
+   
+   git remote add origin https://github.com
+   
+   5. Đổi tên nhánh mặc định thành main (nếu cần thiết):
+   
+   git branch -M main
+   
+   6. Đẩy dữ liệu code từ máy tính lên GitHub:
+   
+   git push -u origin main
+   
+   
+· 1970 M01 1
+------------------------------
+Nếu bạn gặp khó khăn trong quá trình thực hiện, hãy cho tôi biết:
+
+* Bạn đang bị kẹt ở câu lệnh nào hay bước nào?
+* Bạn có cần hướng dẫn tạo file README hoặc .gitignore không?
+
+Tôi sẽ hỗ trợ bạn khắc phục lỗi chi tiết nhất!
+
+[1] [https://cystack.net](https://cystack.net/vi/tutorial/day-du-an-len-github)
+[2] [https://aws.amazon.com](https://aws.amazon.com/vi/what-is/repo/)
+[3] [https://www.toponseek.com](https://www.toponseek.com/blogs/repository-github-la-gi/)
+[4] [https://viblo.asia](https://viblo.asia/p/github-1001-cho-sinh-vien-it-de-nhu-an-pho-du-lam-mot-minh-hay-lam-nhom-p1-gdJzvbKGJz5)
+[5] [https://spiderum.com](https://spiderum.com/bai-dang/Cach-tao-mot-du-an-tren-Github-MAPsGp0mpvZT)
+[6] [https://codegym.vn](https://codegym.vn/blog/thuc-hanh-tao-du-an-moi-tren-github/)
+
+
+
+
+
+
+
+
+
+
+
+
+Quy trình đẩy commit của một dự án thông thường (khi repo đã được kết nối xong) gồm 3 bước cơ bản lặp đi lặp lại hàng ngày.
+------------------------------
+## Quy trình 3 bước đẩy commit thông thường
+Mỗi khi bạn hoàn thành một tính năng, sửa xong một lỗi hoặc kết thúc ngày làm việc, hãy mở Git Bash/Terminal tại thư mục dự án và chạy các lệnh sau:
+
+   1. Kiểm tra và Gom nhóm thay đổi:
+   
+   git add .
+   
+   * Ý nghĩa: Lệnh này gom toàn bộ các file bạn vừa chỉnh sửa, thêm mới hoặc xóa bỏ vào vùng chờ (Staging Area).
+   2. Ghi nhận lịch sử (Tạo Commit):
+   
+   git commit -m "Nội dung lời nhắn rõ ràng về tính năng vừa làm"
+   
+   * Ý nghĩa: Đóng gói các thay đổi thành một "viên nang thời gian" kèm thông điệp mô tả ngắn gọn bạn đã làm gì (ví dụ: git commit -m "Sửa lỗi hiển thị nút đăng nhập").
+   3. Đẩy lên GitHub:
+   
+   git push
+   
+   * Ý nghĩa: Đưa gói commit từ máy tính của bạn lên trên kho lưu trữ trực tuyến GitHub. Bạn không cần gõ thêm origin main ở các lần sau nếu lần đầu đã dùng lệnh -u.
+   
+## Quy trình chuẩn khi làm việc nhóm (Tránh xung đột code)
+Nếu bạn làm việc chung với người khác, trước khi code hoặc trước khi push, bạn nên có thói quen cập nhật code mới nhất của mọi người về máy mình:
+
+git pull# Sau khi pull code mới về, bạn tiến hành code -> git add . -> git commit -> git push
+
+------------------------------
+Để hình dung rõ hơn về luồng đi của mã nguồn từ máy tính lên đám mây, video dưới đây sẽ mô phỏng trực quan các thao tác add, commit và push hàng ngày:
+· 1970 M01 1
+------------------------------
+Để thành thạo hơn, hãy cho tôi biết:
+
+* Bạn có muốn biết cách viết tin nhắn commit (commit message) chuẩn chuyên nghiệp không?
+* Bạn có đang gặp lỗi "Rejected/Fetch first" khi gõ lệnh git push không?
+
+Tôi sẽ hỗ trợ bạn xử lý ngay!
+
+
+
+
+oooooooooooooo
